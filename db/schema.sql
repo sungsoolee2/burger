@@ -1,13 +1,12 @@
--- Database 
-CREATE DATABASE burgers;
 
-USE burgers;
+CREATE DATABASE burger;
 
--- Table 
+USE burger;
+
 CREATE TABLE burgers(
 id INTEGER AUTO_INCREMENT,
-burger_name VARCHAR(50),
+burger_name VARCHAR(100),
 devoured BOOLEAN,
 
-PRIMARY KEY(id),
+PRIMARY KEY(id)
 );

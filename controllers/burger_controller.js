@@ -1,42 +1,41 @@
 // Node Dependencies
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var burger = require('../models/burger.js');
+var burger = require("../models/burger.js");
 
 //Routes
 
 // Redirect
-router.get('/', function (req, res) {
-  res.redirect('/index');
+router.get("/", function (req, res) {
+  res.redirect("/index");
 });
 
 
 // Index 
-router.get('/index', function (req, res) {
+router.get("/index", function (req, res) {
   burger.all(function(data) {
     var BurgerData = { burgers: data };
     console.log(BurgerData);
-    res.render('index', BurgerData);
+    res.render("index", BurgerData);
   });
 });
 
 
 // Create a New Burger
-router.post('/burger/create', function (req, res) {
+router.post("/burger/create", function (req, res) {
   burger.insertBurger(req.body.burger_name, function() {
-    res.redirect('/index');
+    res.redirect("/index");
   });
 });
 
 
 // Devour a Burger
-router.post('/burger/eat/:id', function (req, res) {
+router.post("/burger/eat/:id", function (req, res) {
   burger.updateBurger(req.params.id, function() {
-    res.redirect('/index');
+    res.redirect("/index");
   });
 });
-// ----------------------------------------------------
 
 
-// Export routes
+// Export routes for App
 module.exports = router;
