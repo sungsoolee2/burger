@@ -8,3 +8,10 @@ img {
 width: 20%;
 
 }
+
+.burger_font{
+    font-size: 35px;
+    font-color: Green;
+    font-type: bolder;
+
+}
