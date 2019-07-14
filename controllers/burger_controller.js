@@ -23,6 +23,10 @@ router.get("/index", function (req, res) {
 
 // Create a New Burger
 router.post("/burger/create", function (req, res) {
+    if (res =="") {
+        alert("Please enter a valid Burger Name")
+        res.redirect("index");
+    }
   burger.insertBurger(req.body.burger_name, function() {
     res.redirect("/index");
   });
