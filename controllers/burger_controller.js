@@ -1,6 +1,6 @@
 // Node Dependencies
 var express = require("express");
-const check = require("express-validator");
+var {check} = require("express-validator");
 var router = express.Router();
 var burger = require("../models/burger.js");
 
@@ -23,11 +23,14 @@ router.get("/index", function (req, res) {
 
 
 // Validate input of burger and Create a New Burger if input valid 
+
 router.post("/burger/create", 
-[check("burger_name").isLength({min: 5}).withMessage("Must be at least 5 Characters Long!")
+[check("name").isEmpty("name",[options])
 
 ],function (req, res) {
-  burger.insertBurger(req.body.burger_name, function() {
+var name =req.body.burger_name
+
+  burger.insertBurger(name, function() {
     res.redirect("/index");
   });
 });
