@@ -7,7 +7,6 @@ var orm = {
     all: function(callback) {
 
     // Run MySQL Query
-
     var queryString ="SELECT * FROM burgers";
 
     connection.query(queryString, function (err, result) {
@@ -20,10 +19,8 @@ var orm = {
   // insertBurger function call
   insertBurger: function(burger_name, callback){
 
-  
     // Run MySQL Query
-
-    var queryString ="INSERT INTO burgers SET ?";
+     var queryString ="INSERT INTO burgers SET ?";
 
     connection.query(queryString, {
       burger_name: burger_name,
@@ -42,8 +39,7 @@ var orm = {
   updateBurger: function(burgerID, callback){
 
     // Run MySQL Query to Update burgers table
-
-    var queryString ="UPDATE burgers SET ? WHERE ?";
+     var queryString ="UPDATE burgers SET ? WHERE ?";
 
     connection.query(queryString, [{devoured: true}, {id: burgerID}], function (err, result) {
         if (err) throw err;
