@@ -1,6 +1,6 @@
 // Node Dependencies
 var express = require("express");
-var {check} = require("express-validator");
+// var {check} = require("express-validator");
 var router = express.Router();
 var burger = require("../models/burger.js");
 
@@ -9,31 +9,32 @@ var burger = require("../models/burger.js");
 // Redirect
 router.get("/", function (req, res) {
   res.redirect("/index");
-});
+})
 
 
 // Index 
 router.get("/index", function (req, res) {
   burger.all(function(data) {
     var hbsObject = { burgers: data };
-    console.log(hbsObject);
+    // console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 
-// Validate input of burger and Create a New Burger if input valid 
+// Create a New Burger 
 
-router.post("/burger/create", 
-[check("name").isEmpty("name",[options])
-
-],function (req, res) {
+router.post("/burger/create",function (req, res) {
 var name =req.body.burger_name
-
-  burger.insertBurger(name, function() {
+//  if (!name) {
+//         res.status(400).send({error: "Burger name is required"}).end();
+//  };
+        
+burger.insertBurger(name, function() {
     res.redirect("/index");
   });
 });
+
 
 
 // Devour a Burger

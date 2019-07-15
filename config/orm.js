@@ -29,7 +29,7 @@ var orm = {
 
     function (err, result) {
       if (err) throw err;
-      console.log(result);
+    //   console.log(result);
       callback(result);
     });
 
@@ -43,7 +43,7 @@ var orm = {
 
     connection.query(queryString, [{devoured: true}, {id: burgerID}], function (err, result) {
         if (err) throw err;
-        console.log(result);
+        // console.log(result);
         callback(result);
       });
 

@@ -2,8 +2,8 @@ body {
   background-color: yellow;
   font-size: 25px;
  
-
 }
+
 img {
 width: 20%;
 
@@ -12,6 +12,6 @@ width: 20%;
 .burger_font{
     font-size: 25px;
     font-color: Green;
-    font-type: bolder;
+    
 
 }

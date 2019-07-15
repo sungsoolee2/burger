@@ -5,7 +5,8 @@
     <link rel="icon" href="/assets/img/Burger.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/burger_style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+    
     <!-- Link in jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     
@@ -14,13 +15,15 @@
 
   <body>
   
+
     <div class="container">
 
       <!-- Burger Image -->
-      <center><div class="row"><img src="/assets/img/Burger.png"></div> </center>
+      <center><div class="row"><br><img src="/assets/img/Burger.png"></div> </center>
           
       <!-- Page Title -->
-      <center><h1 class="burger_font">Eat Da Burger! </h1></center>
+      <center><h1 class="burger_font">
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i></span> Eat Da Burger! </h1></center>
 
       <!-- Burger Content from index.handlebars -->
       {{{body}}}
@@ -34,9 +37,10 @@
           <div class="col-md-3"></div> 
 
           <!-- Burger Input Box -->
+  
           <div class="form-group col-md-6">
-            <center><label for="new_burger" class="burger_font">Add a New Burger...</label></center>
-            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+            <center><label for="new_burger" class="burger_font"><br>Add a New Burger...</label></center>
+            <textarea class="form-control" columns="8" rows="2" id="new_burger" name="burger_name"></textarea>
           </div>
 
           <!-- Empty Div to center text -->
@@ -45,7 +49,8 @@
         </div>
       
         <!-- Submit Button -->
-        <center> <button id="submit-button" type="submit" class="btn btn-danger">Place Order</button></center>
+        <center> <button id="submit-button" type="submit" class="btn btn-danger">
+        <i class="fa fa-cart-plus" aria-hidden="true"></i></span>  Place Order</button></center>
 
       </form>
 
