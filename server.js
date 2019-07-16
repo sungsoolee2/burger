@@ -1,4 +1,14 @@
 var express = require("express");
+//access MYSQL key through .env file//
+require("dotenv").config();
+// console.log(require("dotenv").config())
+
+//set MYSQL key and assign node spotify api//
+// var keys = require("./keys.js");
+// console.log(keys)
+
+// var MYSQL = require('node-mysql-psw');
+// var mysql = new MYSQL(keys.mysql);
 
 var PORT = process.env.PORT || 8080;
 
