@@ -14,7 +14,8 @@ The user may enter any burger name to add it to the menu. This also adds the new
 
 [Heroku Link ](https://myfavoriteburger.herokuapp.com/)
 
-## Screen Shots
+# Screen Shots
 Burger App
+
 ![Screen shot](\public\assets\img\screenshot.png)
 
