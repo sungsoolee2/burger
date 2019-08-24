@@ -16,5 +16,5 @@ The user may enter any burger name to add it to the menu. This also adds the new
 
 ## Screen Shots
 Burger App
-![Screen shot](\public\assets\img\burger1.png)
+![Screen shot](public\assets\img\burger1.png)
 
